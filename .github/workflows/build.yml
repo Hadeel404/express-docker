@@ -31,4 +31,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag ghcr.io/hadeel404/express-docker:${{ steps.image_version.outputs.gitsha }}
     - name: Publish docker image
-      run: docker push ghcr.io/hadeel404/express-docker:$({{ steps.image_version.outputs.gitsha }}
+      run: docker push ghcr.io/hadeel404/express-docker:${{ steps.image_version.outputs.gitsha }}
